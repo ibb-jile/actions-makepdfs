@@ -1,5 +1,5 @@
 FROM node:10
-
+ENV PUPPETEER_CHROMIUM_REVISION 706915
 RUN apt-get update && \
     apt-get -y install xvfb gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 \
       libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 \
@@ -8,7 +8,7 @@ RUN apt-get update && \
       libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget curl && \
     rm -rf /var/lib/apt/lists/*
 
-RUN npm install puppeteer markdown-it mustache markdown-it-named-headers cheerio highlight.js
+RUN npm install puppeteer@1.15.0 markdown-it mustache markdown-it-named-headers cheerio highlight.js
 COPY makepdfs.js /
 COPY package.json /
 COPY template/ template/
