@@ -7,7 +7,7 @@ const output_dir = process.env.INPUT_OUTPUT_DIR;
 var fs = require( 'fs' );
 var mddir = '/github/workspace/' + markdown_dir;
 var dir = '/github/workspace/' + output_dir + '/';
-var hljs = 'highlight';
+var hljs = require('highlight.js');
 
 /*
  * Show an error message
