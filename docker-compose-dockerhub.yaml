@@ -6,4 +6,4 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: "ibb-jile/actions-makepdfs:${TAG:-latest}"
+    image: "jiriletak/makepdfs:${TAG:-latest}"
